@@ -1,0 +1,72 @@
+00:00.0 Class 0600: 17f3:6021 (rev 01)
+	Control: I/O- Mem+ BusMaster+ SpecCycle+ MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B-
+	Status: Cap- 66Mhz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort+ >SERR- <PERR-
+	Latency: 0
+
+00:03.0 Class 0300: 18ca:0020
+	Subsystem: 18ca:0020
+	Control: I/O+ Mem+ BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B-
+	Status: Cap+ 66Mhz+ UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR-
+	BIST result: 00
+	Region 0: Memory at f8000000 (32-bit, prefetchable) [size=64M]
+	Region 1: Memory at fefc0000 (32-bit, non-prefetchable) [size=256K]
+	Region 2: I/O ports at df80 [size=128]
+	Expansion ROM at <unassigned> [disabled]
+	Capabilities: [40] Power Management version 2
+		Flags: PMEClk- DSI- D1+ D2+ AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D0 PME-Enable- DSel=0 DScale=0 PME-
+
+00:07.0 Class 0601: 17f3:6031 (rev 02)
+	Control: I/O+ Mem+ BusMaster+ SpecCycle+ MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B-
+	Status: Cap- 66Mhz- UDF- FastB2B- ParErr- DEVSEL=?? >TAbort- <TAbort- <MAbort- >SERR- <PERR-
+	Latency: 0
+
+00:08.0 Class 0200: 17f3:6040
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B-
+	Status: Cap- 66Mhz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR-
+	Latency: 128 (750ns min, 2000ns max)
+	Interrupt: pin A routed to IRQ 9
+	Region 0: I/O ports at de00 [size=256]
+	Region 1: Memory at fefbb400 (32-bit, non-prefetchable) [size=256]
+	Expansion ROM at fefa0000 [disabled] [size=64K]
+
+00:0a.0 Class 0c03: 17f3:6060 (rev 12) (prog-if 10)
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR+ FastB2B-
+	Status: Cap- 66Mhz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR-
+	Latency: 128, cache line size 08
+	Interrupt: pin A routed to IRQ 9
+	Region 0: Memory at fefb9000 (32-bit, non-prefetchable) [size=4K]
+
+00:0a.1 Class 0c03: 17f3:6061 (rev 03) (prog-if 20)
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR+ FastB2B-
+	Status: Cap- 66Mhz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR-
+	Latency: 128, cache line size 08
+	Interrupt: pin B routed to IRQ 6
+	Region 0: Memory at fefbb800 (32-bit, non-prefetchable) [size=256]
+
+00:0b.0 Class 0c03: 17f3:6060 (rev 12) (prog-if 10)
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR+ FastB2B-
+	Status: Cap- 66Mhz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR-
+	Latency: 128, cache line size 08
+	Interrupt: pin A routed to IRQ 5
+	Region 0: Memory at fefba000 (32-bit, non-prefetchable) [size=4K]
+
+00:0b.1 Class 0c03: 17f3:6061 (rev 03) (prog-if 20)
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR+ FastB2B-
+	Status: Cap- 66Mhz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR-
+	Latency: 128, cache line size 08
+	Interrupt: pin B routed to IRQ 9
+	Region 0: Memory at fefbbc00 (32-bit, non-prefetchable) [size=256]
+
+00:0c.0 Class 0101: 17f3:1011 (rev 01) (prog-if 8a [Master SecP PriP])
+	Subsystem: 17f3:1011
+	Control: I/O+ Mem- BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B-
+	Status: Cap- 66Mhz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR-
+	Latency: 0, cache line size 04
+	Interrupt: pin A routed to IRQ 14
+	Region 0: I/O ports at 01f0 [size=8]
+	Region 1: I/O ports at 03f4
+	Region 2: I/O ports at 0170 [size=8]
+	Region 3: I/O ports at 0374
+	Region 4: I/O ports at ef00 [size=16]
+

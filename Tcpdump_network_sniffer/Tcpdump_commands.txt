@@ -1,0 +1,177 @@
+12 Tcpdump Commands – A Network Sniffer Tool
+
+1. Capture Packets from Specific Interface
+   
+   # tcpdump -i eth0
+
+2. Capture Only N Number of Packets
+
+When you run tcpdump command it will capture all the packets for specified interface, until you Hit cancel button. But using -c option, you can capture specified number of packets. The below example will only capture 6 packets.
+
+# tcpdump -c 5 -i eth0
+
+3. Print Captured Packets in ASCII
+
+The below tcpdump command with option -A displays the package in ASCII format. It is a character-encoding scheme format.
+
+# tcpdump -A -i eth0
+
+4. Display Available Interfaces
+
+To list number of available interfaces on the system, run the following command with -D option.
+
+# tcpdump -D
+
+5. Display Captured Packets in HEX and ASCII
+
+The following command with option -XX capture the data of each packet, including its link level header in HEX and ASCII format.
+
+# tcpdump -XX -i eth0
+
+6. Capture and Save Packets in a File
+
+As we said, that tcpdump has a feature to capture and save the file in a .pcap format, to do this just execute command with -w option.
+
+# tcpdump -w 0001.pcap -i eth0
+
+7. Read Captured Packets File
+
+To read and analyze captured packet 0001.pcap file use the command with -r option, as shown below.
+
+# tcpdump -r 0001.pcap
+
+8. Capture IP address Packets
+
+To capture packets for a specific interface, run the following command with option -n.
+
+# tcpdump -n -i eth0
+
+9. Capture only TCP Packets.
+
+To capture packets based on TCP port, run the following command with option tcp.
+
+# tcpdump -i eth0 tcp
+
+10. Capture Packet from Specific Port
+
+Let’s say you want to capture packets for specific port 22, execute the below command by specifying port number 22 as shown below.
+
+# tcpdump -i eth0 port 22
+
+11. Capture Packets from source IP
+
+To capture packets from source IP, say you want to capture packets for 192.168.0.2, use the command as follows.
+
+# tcpdump -i eth0 src 192.168.0.2
+
+12. Capture Packets from destination IP
+
+To capture packets from destination IP, say you want to capture packets for 50.116.66.139, use the command as follows.
+
+# tcpdump -i eth0 dst 50.116.66.139
+
+=========================================================================================================
+
+
+Packet Analyzer: 15 TCPDUMP Command Examples
+
+tcpdump command is also called as packet analyzer.
+
+tcpdump command will work on most flavors of unix operating system. tcpdump allows us to save the packets that are captured, so that we can use it for future analysis. The saved file can be viewed by the same tcpdump command. We can also use open source software like wireshark to read the tcpdump pcap files.
+
+In this tcpdump tutorial, let us discuss some practical examples on how to use the tcpdump command.
+
+1. Capture packets from a particular ethernet interface using tcpdump -i
+
+When you execute tcpdump command without any option, it will capture all the packets flowing through all the interfaces. -i option with tcpdump command, allows you to filter on a particular ethernet interface.
+
+$ tcpdump -i eth1
+
+Note: Editcap utility is used to select or remove specific packets from dump file and translate them into a given format.
+
+
+ 
+2. Capture only N number of packets using tcpdump -c
+
+When you execute tcpdump command it gives packets until you cancel the tcpdump command. Using -c option you can specify the number of packets to capture.
+
+$ tcpdump -c 2 -i eth0
+
+Note: Mergecap and TShark: Mergecap is a packet dump combining tool, which will combine multiple dumps into a single dump file. Tshark is a powerful tool to capture network packets, which can be used to analyze the network traffic. It comes with wireshark network analyzer distribution.
+
+3. Display Captured Packets in ASCII using tcpdump -A
+
+The following tcpdump syntax prints the packet in ASCII.
+
+$ tcpdump -A -i eth0
+
+
+4. Display Captured Packets in HEX and ASCII using tcpdump -XX
+
+
+5. Capture the packets and write into a file using tcpdump -w
+
+tcpdump allows you to save the packets to a file, and later you can use the packet file for further analysis.
+
+$ tcpdump -w 08232010.pcap -i eth0
+
+
+6. Reading the packets from a saved file using tcpdump -r
+
+You can read the captured pcap file and view the packets for analysis, as shown below.
+
+
+7. Capture packets with IP address using tcpdump -n
+
+In all the above examples, it prints packets with the DNS address, but not the ip address. The following example captures the packets and it will display the IP address of the machines involved.
+
+$ tcpdump -n -i eth0
+
+8. Capture packets with proper readable timestamp using tcpdump -tttt
+
+$ tcpdump -n -tttt -i eth0
+
+
+9. Read packets longer than N bytes
+
+You can receive only the packets greater than n number of bytes using a filter ‘greater’ through tcpdump command
+
+$ tcpdump -w g_1024.pcap greater 1024
+
+10. Receive only the packets of a specific protocol type
+
+You can receive the packets based on the protocol type. You can specify one of these protocols — fddi, tr, wlan, ip, ip6, arp, rarp, decnet, tcp and udp. The following example captures only arp packets flowing through the eth0 interface.
+
+$ tcpdump -i eth0 arp
+
+11. Read packets lesser than N bytes
+
+You can receive only the packets lesser than n number of bytes using a filter ‘less’ through tcpdump command
+
+$ tcpdump -w l_1024.pcap  less 1024
+
+12. Receive packets flows on a particular port using tcpdump port
+
+If you want to know all the packets received by a particular port on a machine, you can use tcpdump command as shown below.
+
+$ tcpdump -i eth0 port 22
+
+
+13. Capture packets for particular destination IP and Port
+
+The packets will have source and destination IP and port numbers. Using tcpdump we can apply filters on source or destination IP and port number. The following command captures packets flows in eth0, with a particular destination ip and port number 22.
+
+$ tcpdump -w xpackets.pcap -i eth0 dst 10.181.140.216 and port 22
+
+14. Capture TCP communication packets between two hosts
+
+If two different process from two different machines are communicating through tcp protocol, we can capture those packets using tcpdump as shown below.
+
+$tcpdump -w comm.pcap -i eth0 dst 16.181.170.246 and port 22
+
+You can open the file comm.pcap using any network protocol analyzer tool to debug any potential issues.
+
+15. tcpdump Filter Packets – Capture all the packets other than arp and rarp
+
+In tcpdump command, you can give “and”, “or” and “not” condition to filter the packets accordingly.
+
